@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Room</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    .form-label i {
+      margin-right: 8px;
+      /* Space between icon and label text */
+    }
+
+    .btn-primary {
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #004085;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center align-items-center min-vh-100 mt-5">
+    <div class="container">
+      <h1 class="text-center">
+        <i class="fas fa-plus"></i> Create Room
+      </h1>
+      <form [formGroup]="roomForm" (ngSubmit)="createRoom()">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="roomtype" class="form-label">
+              <i class="fas fa-door-open"></i> Room Type
+            </label>
+            <select class="form-select" id="roomtype" formControlName="roomtype" required>
+              <option *ngFor="let option of roomtyp" [value]="option.value">
+                {{ option.label }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="adults" class="form-label">
+              <i class="fas fa-user"></i> Adults
+            </label>
+            <input id="adults" type="number" class="form-control" formControlName="adults"
+              placeholder="Enter number of adults">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="children" class="form-label">
+              <i class="fas fa-child"></i> Children
+            </label>
+            <input id="children" type="number" class="form-control" formControlName="children"
+              placeholder="Enter number of children">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="price" class="form-label">
+              <i class="fas fa-dollar-sign"></i> Price
+            </label>
+            <input type="number" class="form-control" id="price" formControlName="price" placeholder="Enter Price"
+              required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3" formGroupName="hotel">
+            <label for="hotel" class="form-label">
+              <i class="fas fa-hotel"></i> Hotel Name
+            </label>
+            <select id="hotel" formControlName="hotelname" class="form-select" required>
+              <option value="" disabled selected>Select your hotel</option>
+              <option *ngFor="let loc of hotels" [ngValue]="loc.hotelname">{{ loc.hotelname }}</option>
+            </select>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="image" class="form-label">
+                <i class="fas fa-building"></i> Room image
+            </label>
+            <input type="text" class="form-control" id="image" formControlName="image"
+                placeholder="Enter hotel image">
+
+        </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-save"></i> Submit
+        </button>
+      </form>
+
+      <table class="table table-bordered mt-3">
+        <thead>
+          <tr>
+            <th>Room Type</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let room of roomtyp">
+            <td>{{ room.label }}</td>
+            <td>{{ room.price | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

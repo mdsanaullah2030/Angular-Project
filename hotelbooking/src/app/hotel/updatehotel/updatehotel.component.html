@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Hotel Details</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    .form-label i {
+      margin-right: 8px;
+      /* Space between icon and label text */
+    }
+
+    .btn-primary {
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #004085;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-4">
+      <i class="fas fa-hotel"></i> Update Hotel Details
+    </h2>
+
+    <form [formGroup]="hotelForm" (ngSubmit)="updateHotel()">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="image" class="form-label">
+            <i class="fas fa-building"></i> Hotel image
+          </label>
+          <input type="text" class="form-control" id="image" formControlName="image" placeholder="Enter hotel name">
+
+
+          <label for="hotelname" class="form-label">
+            <i class="fas fa-building"></i> Hotel Name
+          </label>
+          <input type="text" class="form-control" id="hotelname" formControlName="hotelname"
+            placeholder="Enter hotel name">
+
+          <label for="address" class="form-label">
+            <i class="fas fa-map-marker-alt"></i> Address
+          </label>
+          <input type="text" class="form-control" id="address" formControlName="address"
+            placeholder="Enter hotel address">
+
+          <label for="rating" class="form-label">Rating</label>
+          <select class="form-select" name="rating" [(ngModel)]="hotel.rating">
+            <option *ngFor="let option of rating" [value]="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+
+          <label for="location" class="form-label">
+            <i class="fas fa-map-marker-alt"></i> Location Name
+          </label>
+          <select id="location" formControlName="location" class="form-select">
+            <option *ngFor="let loc of locations" [ngValue]="loc">{{ loc.locationname }}</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-save"></i> Update Hotel
+      </button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+{
+  "user": [
+    {
+      "id": "4498",
+      "image": "https://avatars.githubusercontent.com/u/158471899?v=4 ",
+      "name": "sanaullah",
+      "email": "sanaullah@gmail.com",
+      "password": "123456789",
+      "role": "Admin"
+    },
+    {
+      "id": "1989",
+      "name": "hamidullah",
+      "email": "hamidullah@gmail.com",
+      "password": "123456789",
+      "role": "User"
+    },
+    {
+      "id": "0ae1",
+      "name": "kutub",
+      "email": "kutub@gmail.com",
+      "password": "123456789",
+      "role": "User"
+    },
+    {
+      "id": "2466",
+      "name": "safi",
+      "email": "safi@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "cf74",
+      "name": "sir",
+      "email": "sir@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "1ae4",
+      "name": "Rabbi",
+      "email": "Rabbi@gmail.com",
+      "password": "123456789",
+      "role": "User"
+    }
+  ],
+  "location": [
+    {
+      "id": "1",
+      "locationname": "Dhaka"
+    },
+    {
+      "id": "3a39",
+      "locationname": "Coxs Bazar"
+    },
+    {
+      "id": "00f0",
+      "locationname": "Kuakata"
+    },
+    {
+      "id": "00f0",
+      "locationname": "Sylhet"
+    },
+    {
+      "id": "00f0",
+      "locationname": "Chittagong"
+    },
+    {
+      "id": "00f0",
+      "locationname": "Rajshahi"
+    }
+  ],
+  "hotel": [
+    {
+      "id": "b4fb",
+      "image": "https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "hotelname": "Dhaka Regency Hotel & Resort Limited",
+      "address": "Airport Road, Nikunja-2",
+      "rating": "**",
+      "location": {
+        "id": "1",
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "ee89",
+      "image": "https://images.pexels.com/photos/528427/pexels-photo-528427.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "hotelname": "Sea Pearl Beach Resort & Spa Cox's Bazar",
+      "address": "Jaliapalong, Inani, Cox's Bazar ",
+      "rating": "***",
+      "location": {
+        "id": "",
+        "locationname": "Coxs Bazar"
+      }
+    },
+    {
+      "id": "dd9a",
+      "image": "https://images.pexels.com/photos/1082326/pexels-photo-1082326.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "hotelname": "Hotel Khan Palace",
+      "address": "Barisal-Patuakhali Road, Kuakata,",
+      "rating": "****",
+      "location": {
+        "id": "00f0",
+        "locationname": "Kuakata"
+      }
+    },
+    {
+      "id": "afd5",
+      "image": "https://images.pexels.com/photos/261395/pexels-photo-261395.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "hotelname": "Sayeman Beach Resort",
+      "address": "Marine Drive Road, Cox's Bazar ",
+      "rating": "****",
+      "location": {
+        "id": "",
+        "locationname": "Coxs Bazar"
+      }
+    },
+    {
+      "id": "c711",
+      "image": "https://images.pexels.com/photos/260931/pexels-photo-260931.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "hotelname": "Seagull Hotel",
+      "address": "Hotel Motel Zone, Sea Beach, Cox's Bazar ",
+      "rating": "****",
+      "location": {
+        "id": "00f0",
+        "locationname": "Coxs Bazar"
+      }
+    },
+    {
+      "id": "835d",
+      "image": "https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "hotelname": "Long Beach Hotel",
+      "address": "Kalatoli, Hotel-Motel Zone,Coxs Bazar",
+      "rating": "***",
+      "location": {
+        "id": "",
+        "locationname": "Coxs Bazar"
+      }
+    },
+    {
+      "id": "3a93",
+      "image": "https://images.pexels.com/photos/949406/pexels-photo-949406.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "hotelname": "Grand Sylhet Hotel & Resort",
+      "address": "Boroshala, Airport Road, Sylhet",
+      "rating": "***",
+      "location": {
+        "id": "",
+        "locationname": "Sylhet"
+      }
+    },
+    {
+      "id": "36ab",
+      "image": "https://images.pexels.com/photos/751268/pexels-photo-751268.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "hotelname": "Grand River View Hotel",
+      "address": "Kazihata Rajshahi",
+      "rating": "**",
+      "location": {
+        "id": "",
+        "locationname": "Rajshahi"
+      }
+    },
+    {
+      "id": "514b",
+      "image": "https://images.pexels.com/photos/1438834/pexels-photo-1438834.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "hotelname": "Hotel Sarina",
+      "address": "27, Banani C/A, Road-17, Gulshan",
+      "rating": "****",
+      "location": {
+        "id": "1",
+        "locationname": "Dhaka"
+      }
+    }
+  ],
+  "room": [
+    {
+      "id": "room1",
+      "image": "https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=600https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "roomtype": "Deluxe Suite",
+      "adults": 2,
+      "children": 2,
+      "price": 200,
+      "hotel": {
+        "id": "hotel1",
+        "hotelname": "Sayeman Beach Resort"
+      }
+    },
+    {
+      "id": "257e",
+      "image": "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "roomtype": "Triple Room",
+      "adults": 5,
+      "children": 6,
+      "price": 9000,
+      "hotel": {
+        "id": "e3a0",
+        "hotelname": "Seagull Hotel"
+      }
+    },
+    {
+      "id": "3296",
+      "image": "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "roomtype": "Superior Room",
+      "adults": 5,
+      "children": 4,
+      "price": 15000,
+      "hotel": {
+        "id": "e3a0",
+        "hotelname": "Dhaka Regency Hotel & Resort Limited"
+      }
+    }
+  ],
+  "booking": [
+    {
+      "id": "edd2",
+      "username": "sanaullah",
+      "checkindate": "2024-08-15",
+      "checkoutdate": "2024-08-29",
+      "totalprice": 238000,
+      "room": {
+        "roomtype": "Executive Room"
+      },
+      "hotel": {
+        "hotelname": "Dhaka Regency Hotel & Resort Limited"
+      },
+      "location": {
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "52b7",
+      "username": "Raju",
+      "checkindate": "2024-09-04",
+      "checkoutdate": "2024-09-13",
+      "totalprice": 45000,
+      "room": {
+        "roomtype": "Single Room"
+      },
+      "hotel": {
+        "hotelname": "Dhaka Regency Hotel & Resort Limited"
+      },
+      "location": {
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "5b5f",
+      "username": "sanaullah",
+      "checkindate": "2024-09-12",
+      "checkoutdate": "2024-09-13",
+      "totalprice": 7000,
+      "room": {
+        "roomtype": "Double Room"
+      },
+      "hotel": {
+        "hotelname": "Dhaka Regency Hotel & Resort Limited"
+      },
+      "location": {
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "d28f",
+      "username": "mahabur",
+      "checkindate": "2024-09-03",
+      "checkoutdate": "2024-09-18",
+      "totalprice": 105000,
+      "room": {
+        "roomtype": "Double Room"
+      },
+      "hotel": {
+        "hotelname": "Sea Pearl Beach Resort & Spa Cox's Bazar"
+      },
+      "location": {
+        "locationname": "Dhaka"
+      }
+    }
+  ]
+}

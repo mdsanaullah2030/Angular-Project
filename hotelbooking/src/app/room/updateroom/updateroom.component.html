@@ -1,0 +1,64 @@
+<div class="container d-flex justify-content-center">
+  <div class="col-md-8 mb-4">
+    <h3 class="text-center text-2xl font-bold mb-4">
+      <fa-icon [icon]="['fas', 'edit']"></fa-icon>
+      Update Room Details
+    </h3>
+
+    <form [formGroup]="roomForm" (ngSubmit)="updateRoom()">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="roomtype" class="form-label">
+            <fa-icon [icon]="['fas', 'door-open']"></fa-icon>
+            Room Type
+          </label>
+          <select class="form-select" id="roomtype" formControlName="roomtype">
+            <option *ngFor="let option of roomtyp" [value]="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label for="hotel" class="form-label">
+            <fa-icon [icon]="['fas', 'hotel']"></fa-icon>
+            Hotel Name
+          </label>
+          <select id="hotel" formControlName="hotel" class="form-select">
+            <option *ngFor="let hotel of hotels" [ngValue]="hotel">{{ hotel.hotelname }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="adults" class="form-label">
+            <fa-icon [icon]="['fas', 'user']"></fa-icon>
+            Adults
+          </label>
+          <input type="number" class="form-control" id="adults" formControlName="adults">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="children" class="form-label">
+            <fa-icon [icon]="['fas', 'child']"></fa-icon>
+            Children
+          </label>
+          <input type="number" class="form-control" id="children" formControlName="children">
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="price" class="form-label">
+          <fa-icon [icon]="['fas', 'dollar-sign']"></fa-icon>
+          Price
+        </label>
+        <input type="number" class="form-control" id="price" formControlName="price">
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        <fa-icon [icon]="['fas', 'save']"></fa-icon>
+        Update Room
+      </button>
+    </form>
+  </div>
+</div>

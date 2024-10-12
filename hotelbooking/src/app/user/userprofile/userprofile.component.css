@@ -1,0 +1,17 @@
+.watermark-container::before {
+    content: "Company Name";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: rgba(9, 141, 90, 0.1); /* Light color for watermark effect */
+    white-space: nowrap;
+    z-index: -1; /* Place it behind the content */
+    pointer-events: none; /* Prevent interactions */
+  }
+  .form-action:hover {
+    background-color: #eaeaea; /* Light gray background */
+    box-shadow: 0 4px 8px #1b74e1; /* Subtle blue shadow effect */
+    transform: scale(1.02); /* Slightly scale up for emphasis */
+  }

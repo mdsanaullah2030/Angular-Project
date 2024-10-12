@@ -1,0 +1,172 @@
+
+/* Styles for the main container */
+.accomodation_two {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Styles for individual hotel cards */
+.accomodation_item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Image styling */
+.hotel_img img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Button styling */
+.theme_btn {
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.theme_btn.button_hover:hover {
+  background-color: #ff4b4b;
+}
+
+/* Hotel name styling */
+.sec_h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+/* Address, rating, and location styling */
+.accomodation_item p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+/* Add a hover effect to the hotel card */
+.accomodation_item:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .col-lg-3 {
+      flex-basis: 48%;
+      max-width: 48%;
+  }
+
+  .col-sm-6 {
+      flex-basis: 100%;
+      max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-lg-3,
+  .col-sm-6 {
+      flex-basis: 100%;
+      max-width: 100%;
+  }
+}
+
+.accomodation_area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Black overlay with 60% opacity */
+  z-index: -1; /* Places the overlay behind the content */
+}
+
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #061e30;
+    border-collapse: collapse;
+    font-size: 0.85rem; /* Smaller font size */
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.5rem; /* Reduced padding */
+    vertical-align: middle;
+    text-align: center;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  /* Table header styling */
+  .table thead th {
+    background-color: #05254d;
+    font-weight: bold;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  /* Table row hover effect */
+  .table-striped tbody tr {
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .table-striped tbody tr:hover {
+    background-color: #eaeaea; /* Light gray background */
+    box-shadow: 0 4px 8px #1b74e1; /* Subtle blue shadow effect */
+    transform: scale(1.02); /* Slightly scale up for emphasis */
+  }
+  
+  /* Table row focus effect for accessibility */
+  .table-striped tbody tr:focus {
+    outline: 2px solid #4CAF50; /* Green outline for focus */
+    outline-offset: 2px;
+  }
+  
+  /* Table striped rows */
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9; /* Light background for odd rows */
+  }
+  
+  /* Table cell styling */
+  .table td {
+    border-bottom: 1px solid #dee2e6;
+    line-height: 1.4; /* Slightly reduced line height */
+  }
+  
+  .table th {
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  /* Responsive table styling */
+  @media (max-width: 768px) {
+    .table {
+        font-size: 12px; /* Even smaller text on smaller screens */
+    }
+  
+    .table td, .table th {
+        padding: 6px; /* Further reduced padding */
+    }
+  }
+  
+  /* Custom styles for table rows */
+  .table-container {
+    margin-top: 30px;
+  }
+  
+  .table td button {
+    margin: 2px;
+    padding: 0.25rem 0.5rem; /* Smaller buttons */
+  }
+  

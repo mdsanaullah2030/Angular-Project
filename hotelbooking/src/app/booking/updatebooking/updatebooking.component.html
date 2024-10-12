@@ -1,0 +1,46 @@
+<div class="container">
+    <h2>Update Hotel Details</h2>
+    
+    <form [formGroup]="bookingForm" (ngSubmit)="updateBooking()">
+      <div class="mb-3">
+        <label for="username" class="form-label">user Name</label>
+        <input type="text" class="form-control" id="username" formControlName="username">
+      </div>
+
+<div class="mb-3">
+  <label for="location" class="form-label">Location Name:</label>
+  <select id="location" formControlName="location" class="form-select">
+    <option *ngFor="let loc of locations" [ngValue]="loc">{{ loc.locationname }}</option>
+  </select>
+</div>
+      <div class="mb-3">
+        <label for="hotel" class="form-label">Htel Name:</label>
+        <select id="hotel" formControlName="hotel" class="form-select">
+          <option *ngFor="let loc of hotels" [ngValue]="loc">{{ loc.hotelname }}</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="room" class="form-label">Room Type :</label>
+        <select id="room" formControlName="room" class="form-select">
+          <option *ngFor="let loc of rooms" [ngValue]="loc">{{ loc.roomtype }}</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="checkindate" class="form-label">checkindate</label>
+        <input type="date" class="form-control" id="checkindate" formControlName="checkindate">
+      </div>
+      <div class="mb-3">
+        <label for="checkoutdate" class="form-label">checkoutdate</label>
+        <input type="date" class="form-control" id="checkoutdate" formControlName="checkoutdate">
+      </div>
+      <div class="mb-3">
+        <label for="totalprice" class="form-label">Total Price</label>
+        <input type="text" class="form-control" id="totalprice" formControlName="totalprice">
+      </div>
+
+  
+      <button type="submit" class="btn btn-primary">Update Hotel</button>
+    </form>
+  </div>
+  
+ 

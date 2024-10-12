@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Hotel Details</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    .form-label i {
+      margin-right: 8px;
+    }
+
+    .card {
+      background-image: url('https://media.istockphoto.com/id/528632309/photo/swimming-pool-and-mediterranean-sea-view.jpg?s=1024x1024&w=is&k=20&c=uPGLzhc1SEqYZeCE1XN6LvbDAEPFzb3N5UAf-LLHUUk=');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: rgb(6, 6, 6); /* Ensure text is readable */
+      border-radius: 0.25rem;
+      padding: 20px;
+    }
+
+    .form-group {
+      transition: no-repeat, no-repeat, no-repeat;
+      padding: 15px;
+      border-radius: 0.25rem;
+    }
+
+    .form-group:hover {
+      box-shadow: 0 4px 8px #1b74e1;
+      transform: scale(1.02);
+    }
+
+    .btn-primary {
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #004085;
+      border-color: #11d5e7;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container  min-vh-100 mt-8">
+  <div class="card">
+    <form [formGroup]="BookingForm" (ngSubmit)="createBooking()">
+      <div class="mb-3 form-group">
+        <label for="username" class="form-label"><i class="fas fa-user"></i> Username</label>
+        <input id="username" type="text" class="form-control" formControlName="username" placeholder="Enter username">
+      </div>
+
+      <div class="mb-3 form-group" formGroupName="location">
+        <label for="location" class="form-label"><i class="fas fa-map-marker-alt"></i> Location Name:</label>
+        <select id="location" formControlName="locationname" class="form-select" required>
+          <option value="" disabled selected>Select your location</option>
+          <option *ngFor="let loc of locations" [ngValue]="loc.locationname">{{ loc.locationname }}</option>
+        </select>
+      </div>
+
+      <div class="mb-3 form-group" formGroupName="hotel">
+        <label for="hotel" class="form-label"><i class="fas fa-hotel"></i> Hotel Name:</label>
+        <select id="hotel" formControlName="hotelname" class="form-select" required>
+          <option value="" disabled selected>Select your hotel</option>
+          <option *ngFor="let hotel of hotels" [ngValue]="hotel.hotelname">{{ hotel.hotelname }}</option>
+        </select>
+      </div>
+
+      <div class="mb-3 form-group" formGroupName="room">
+        <label for="room" class="form-label"><i class="fas fa-bed"></i> Room Type:</label>
+        <select id="room" formControlName="roomtype" class="form-select" required>
+          <option value="" disabled selected>Select your room type</option>
+          <option *ngFor="let room of roomtyp" [ngValue]="room.value">{{ room.label }}</option>
+        </select>
+      </div>
+
+      <div class="mb-3 form-group">
+        <label for="checkindate" class="form-label"><i class="fas fa-calendar-alt"></i> Check-in Date</label>
+        <input id="checkindate" type="date" class="form-control" formControlName="checkindate">
+      </div>
+
+      <div class="mb-3 form-group">
+        <label for="checkoutdate" class="form-label"><i class="fas fa-calendar-alt"></i> Check-out Date</label>
+        <input id="checkoutdate" type="date" class="form-control" formControlName="checkoutdate">
+      </div>
+
+      <div class="mb-3 form-group">
+        <label for="totalprice" class="form-label"><i class="fas fa-dollar-sign"></i> Total Price</label>
+        <input id="totalprice" type="number" class="form-control" readonly formControlName="totalprice">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+      <div *ngIf="bookingSuccess" class="alert alert-success mt-3" role="alert">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-check-circle"></i> Booking completed successfully!</h5>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

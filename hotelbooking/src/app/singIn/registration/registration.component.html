@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Hotel Details</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    .form-label i {
+      margin-right: 8px;
+    }
+
+    .card {
+      background-image: url('https://media.istockphoto.com/id/134218652/photo/pool-at-tropical-resort.jpg?s=1024x1024&w=is&k=20&c=V6OfpaenVbR09RDiOg3N7e1e_hAKuXW2L7cmLaTvvGc=');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: rgb(249, 245, 245);
+      /* Ensure text is readable */
+      border-radius: 0.25rem;
+    }
+
+    .form-group {
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+      /* Smooth transition */
+    }
+
+    .form-group:hover {
+      background-color: no-repeat;
+      /* Light gray background */
+      box-shadow: 0 4px 8px #1b74e1;
+      /* Subtle blue shadow effect */
+      transform: scale(1.02);
+      /* Slightly scale up for emphasis */
+    }
+
+
+    .form-group {
+      background-color: no-repeat;
+      /* Semi-transparent background */
+      padding: 15px;
+      border-radius: 0.25rem;
+    }
+
+    .btn-primary {
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      /* Add transition */
+    }
+
+    .btn-primary:hover {
+      background-color: #004085;
+      border-color: #11d5e7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header text-center">
+            <h2 class="text-center mb-4">Register</h2>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="regForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+              <div class="form-group">
+                <!-- Name Input -->
+                <div class="mb-3">
+                  <label for="name" class="form-label">
+                    <i class="fas fa-user"></i> Name
+                  </label>
+                  <input type="text" id="name" formControlName="name" class="form-control" placeholder="Enter your name"
+                    required />
+                  <div class="invalid-feedback">
+                    Please enter your name.
+                  </div>
+                </div>
+
+                <!-- Email Input -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">
+                    <i class="fas fa-envelope"></i> Email
+                  </label>
+                  <input type="email" id="email" formControlName="email" class="form-control"
+                    placeholder="Enter your email" required />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+
+                <!-- Password Input -->
+                <div class="mb-3">
+                  <label for="password" class="form-label">
+                    <i class="fas fa-lock"></i> Password
+                  </label>
+                  <input type="password" id="password" formControlName="password" class="form-control"
+                    placeholder="Enter your password" required />
+                  <div class="invalid-feedback">
+                    Please enter a password.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+
+                  <label for="role" class="form-label">
+                    <i class="fas fa-lock"></i> Role
+                  </label>
+                  <input type="role" id="role" formControlName="role" class="form-control"
+                    placeholder="Enter your role" required />
+                  <div class="invalid-feedback">
+                    Please enter a role.
+                  </div>
+                </div>
+              </div>
+ <!-- Submit Button -->
+              <div class="text-left">
+                <button type="submit" class="btn btn-primary w-10">
+                  <i class="fas fa-user-plus"></i> Register
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

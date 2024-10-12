@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Add Form</title>
+    <!-- Add Font Awesome and Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS for card hover effect -->
+    <style>
+        .card {
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hotel_img img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hotel_img .theme_btn {
+            margin-top: 10px;
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <button type="button" class="btn btn-primary mb-4" (click)="createRoom()">
+            <i class="fas fa-plus"></i> Create Room
+        </button>
+        <h2 class="mb-4">
+            <i class="fas fa-bed"></i> Room Management
+        </h2>
+
+        <div class="row accomodation_two">
+
+            <div *ngFor="let st of rooms | async" class="col-lg-3 col-sm-6">
+                <div class="accomodation_item text-center">
+                    <div class="hotel_img">
+                        <img [src]="st.image" alt="{{ st.image }}" />
+
+                        <a href="booking" class="btn theme_btn button_hover">Book Now</a>
+                    </div>
+                    <p>Roomtype:{{ st.roomtype }}</p>
+        
+                    <h4 class="sec_h4">Hotel Name: {{ st.hotel.hotelname }}</h4>
+                    <p> <i class="fas fa-user"></i>Adults: {{ st.adults }} </p>
+                    <p><i class="fas fa-child"></i> Children: {{ st.children }}</p>
+                    <p> <i class="fas fa-dollar-sign"></i>Price: ${{ st.price }}</p>
+                    <button class="btn btn-warning btn-sm" (click)="editRoom(st.id)">
+                        <i class="fas fa-edit"></i> Edit
+                    </button>
+                    <button class="btn btn-danger btn-sm" (click)="deleteRoom(st.id)">
+                        <i class="fas fa-trash-alt"></i> Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap and Font Awesome scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
